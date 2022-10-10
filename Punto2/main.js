@@ -40,7 +40,7 @@ async function predictName(e){
         }
         //Si no escribe nada, muestra el mensaje de ingresar algun nombre
         else {
-            output.innerHTML = 'Por favor ingresa almenos un nombre.'; 
+            output.style.display = 'none'; 
         }
     }
     //Si hay mas de un nombre, busca cada uno en la API
@@ -58,12 +58,12 @@ async function predictName(e){
                 output.innerHTML += `Hola ${data.name} 👋, ¿Tienes ${data.age} años?.</br>`; 
             }
             else{
-                output.innerHTML += 'Por favor ingresa almenos un nombre.'; 
+                output.style.display = 'none'; 
             }
         }
     }
     else {
-        output.innerHTML = 'Por favor ingresa almenos un nombre.'; 
+        output.style.display = 'none'; 
     }
 }
 
